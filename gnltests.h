@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 16:17:08 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/08 18:07:47 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/11 13:21:30 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
 #define PRINTNAME(name) printf("=== %s ===\n", name);
 #define SUCCESSMSG "\e[32m[Success]\e[39m\n"
 #define PRINTFSUCCESS printf("%s", SUCCESSMSG)
@@ -27,6 +29,6 @@
 #define INTMIN "-2147483648"
 #define INTMAX "2147483647"
 
-void	test_ft_realloc(void);
+void	basic_test(void);
 
 #endif

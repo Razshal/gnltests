@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 16:46:10 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/08 18:08:10 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/11 13:47:10 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 int main(void)
 {
-	test_ft_realloc();
+	PRINTNAME("GNLTESTS");
+	basic_test();
 }
