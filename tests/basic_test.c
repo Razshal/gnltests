@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:03:48 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/13 13:34:34 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/13 19:22:01 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	basic_test(void)
 {
 	PRINTNAME("basic_test");
-	char	*line;
+	char	*line = NULL;
 	int fd = open("./tests/test4", O_RDONLY);
 
 	get_next_line(fd, &line);
@@ -25,7 +25,6 @@ void	basic_test(void)
 	get_next_line(fd, &line);
 	printf("line2 = %s\n", line);
 	free(line);
-	line = NULL;
 
 	get_next_line(fd, &line);
 	printf("line3 = %s\n", line);
@@ -40,13 +39,15 @@ void	basic_test(void)
 	free(line);
 
 ///////////////=================================================
+	PRINTNAME("test2");
 	fd = open("./tests/test5", O_RDONLY);
 
-	get_next_line(fd, &line);
+	if (get_next_line(fd, &line) && !strcmp(line, "aaa"))
+		PRINTFSUCCESS;
+	else
+		PRINTFFAILURE;
 	printf("line = %s\n", line);
-	free(line);
 
 	get_next_line(fd, &line);
 	printf("line2 = %s\n", line);
-	free(line);
 }
