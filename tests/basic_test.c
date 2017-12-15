@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:03:48 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/15 20:16:58 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/15 20:18:56 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ static int	generic_tester(char *expected, int fd)
 void	basic_test(void)
 {
 	PRINTNAME("basic_test");
-//	char	*line = NULL;
 	int fd = open("./tests/test1", O_RDONLY);
 	generic_tester("teeeeest", fd);
 	ft_memdel((void**)&line);
