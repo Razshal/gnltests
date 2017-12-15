@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 16:17:08 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/15 17:34:20 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/15 18:24:31 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@
 #define EASYTESTFAIL printf("Echec d'un test de fonctionnement basique\n");
 #define INTMIN "-2147483648"
 #define INTMAX "2147483647"
-#define BASICTEST(condition) condition ? PRINTFSUCCESS : PRINTFFAILURE
+#define GNLRETURN(ret) printf("Return Value : %d\n", ret)
 
 void	basic_test(void);
 

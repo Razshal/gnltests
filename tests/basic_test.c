@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:03:48 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/15 18:17:32 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/15 18:31:18 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	basic_test(void)
 ///////////////=================================================
 
 	fd = open("./tests/test2", O_RDONLY);
-	get_next_line(fd, &line);
+	GNLRETURN(get_next_line(fd, &line));
 
 	if (!generic_tester(!strcmp(line, "1234fjdskfjdskfjdskjfhds1")))
 		printf("you are returning\n|%s|\ninstead of\n|teeeeest|\n", line);
@@ -51,40 +51,24 @@ void	basic_test(void)
 ///////////////================================================
 
 	fd = open("./tests/gnl7_3", O_RDONLY);
-	get_next_line(fd, &line);
-printf("ici%s\n", line);
+	GNLRETURN(get_next_line(fd, &line));
+
 	if (!generic_tester(line && !strcmp(line, "1234567")))
 		printf("you are returning\n|%s|\ninstead of\n|teeeeest|\n", line);
 
 	ft_memdel((void**)&line);
 
 ///////////////=================================================
+
 	fd = open("./tests/gnl7_2", O_RDONLY);
-	get_next_line(fd, &line);
+	GNLRETURN(get_next_line(fd, &line));
 
 	if (!generic_tester(line && !strcmp(line, "1234567")))
 		printf("you are returning\n|%s|\ninstead of\n|teeeeest|\n", line);
 
 	ft_memdel((void**)&line);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+///////////////=================================================
 
 	printf("gnl ret %d\nline2 = %s\n", get_next_line(fd, &line), line);
 	if (line)free(line);
