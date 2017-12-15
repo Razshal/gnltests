@@ -1,18 +1,49 @@
 === GNLTESTS ===
 === basic_test ===
-gnl ret 1
-line = Mesdames, messieurs, la République du respect doit renouveler la responsabilisation protectrice et la dynamique d'un projet porteur de véritables espoirs, notamment pour les plus démunis. Inutile de chercher à vous convaincre, vous qui savez déceler le vrai du faux, si j'affirme avec force que l'effort prioritaire en faveur du statut précaire des exclus véhicule les prémices d'une restructuration dans laquelle chacun pourra enfin retrouver sa dignité. Je désirerai que vous jaugiez que la puissante divergence locale a pour effet voulu la pressante exigence d'un plan correspondant véritablement aux exigences légitimes de chacun. Je m'efforce sans relâche pour vous, afin que vous appréhendiez au mieux le fait que l'approche sociale dans notre pays génère la profonde réflexion d'un seul vrai recours qui dit qu'il faut faire son devoir au quotidien. Je ne peux affirmer le point de vue qui conduit à penser que le développement équitable propose concrètement l'opposition résolue d'une force sereine et progressiste qui remettra notre pays sur le chemin de la réussite. Présentement, la démocratie participative se concentre sur les citoyens et les forces sociales d'une rupture sans agitation partisane pour retrouver le chemin du vivre ensemble. Mesdames, messieurs, je vous remercie de votre attention. Par la même soyez assuré de ma réelle implication et du caractère profond de mon engagement concrétisé ici par les mots pour vous offrir un monde meilleur et plus juste.
-gnl ret 0
-line2 = (null)
-gnl ret 0
-line3 = (null)
-gnl ret 0
-line4 = (null)
-gnl ret 0
-line5 = (null)
-read:-1
-buffer:
+temp
+[32m[Success][39m
+temp
+Return Value : 1
+[32m[Success][39m
+Return Value : -1
+[31m[Failure][39m
+you are returning
 |(null)|
+instead of
+|teeeeest|
+Return Value : -1
+[31m[Failure][39m
+you are returning
+|(null)|
+instead of
+|teeeeest|
+gnl ret -1
+line2 = (null)
+gnl ret -1
+line3 = (null)
+gnl ret -1
+line4 = (null)
+gnl ret -1
+line5 = (null)
+tempfdsfjhdskfjhdskfjh dskfjhds2
+kfjhdskfjhdskjfhdskjfh3
+dskjfhdskfjhsdk fjhsdkjfhsdkf4
+jhsdkfjhdskfjhdskfjhdskfjhdskfjhdskfjhds fsdf 5
+ fjdslfkjdslkfjdslk fjdslfj dslkfjdslfkjsdlfkjsdlkfjdslkfjsdlkjfldskfjoidjfgodigjfodgjfd lgjfdkl gjfdlgj dfigjfdoi jgodfjg ofdijgofdijg 
+ fsdjflisdjfsdjfidsjfidsjfoisdjfodsijfodsijgidfjgoifdjgopdfkgdf
+
+read:1
 === test2 ===
-line = (null)
-line2 = 12
+tempkfjhdskfjhdskjfhdskjfh3
+dskjfhdskfjhsdk fjhsdkjfhsdkf4
+jhsdkfjhdskfjhdskfjhdskfjhdskfjhdskfjhds fsdf 5
+ fjdslfkjdslkfjdslk fjdslfj dslkfjdslfkjsdlfkjsdlkfjdslkfjsdlkjfldskfjoidjfgodigjfodgjfd lgjfdkl gjfdlgj dfigjfdoi jgodfjg ofdijgofdijg 
+ fsdjflisdjfsdjfidsjfidsjfoisdjfodsijfodsijgidfjgoifdjgopdfkgdf
+
+line = kfjhdskfjhdskjfhdskjfh3
+tempdskjfhdskfjhsdk fjhsdkjfhsdkf4
+jhsdkfjhdskfjhdskfjhdskfjhdskfjhdskfjhds fsdf 5
+ fjdslfkjdslkfjdslk fjdslfj dslkfjdslfkjsdlfkjsdlkfjdslkfjsdlkjfldskfjoidjfgodigjfodgjfd lgjfdkl gjfdlgj dfigjfdoi jgodfjg ofdijgofdijg 
+ fsdjflisdjfsdjfidsjfidsjfoisdjfodsijfodsijgidfjgoifdjgopdfkgdf
+
+line2 = dskjfhdskfjhsdk fjhsdkjfhsdkf4
