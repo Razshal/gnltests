@@ -6,7 +6,7 @@
 #    By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/08 16:12:13 by mfonteni          #+#    #+#              #
-#    Updated: 2017/12/11 14:53:43 by mfonteni         ###   ########.fr        #
+#    Updated: 2017/12/16 16:22:17 by mfonteni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,6 +15,7 @@ TESTDIR = tests/
 GNL = ../gnl/get_next_line.c
 SRC =	gnltests.c \
 		$(TESTDIR)basic_test.c \
+		$(TESTDIR)buffer_test.c \
 		$(GNL)
 
 FLAGS = -Wall -Wextra -Werror

@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 16:46:10 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/16 11:49:22 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/16 16:20:58 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@ int main(void)
 {
 	NAME("GNLTESTS");
 	basic_test();
+	buffer_test();
 }

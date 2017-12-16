@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 16:17:08 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/16 11:49:12 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/16 16:20:45 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@
 #define GNLRETURN(ret) printf("Return Value : %d\n", ret)
 
 void	basic_test(void);
+void	buffer_test(void);
 
 #endif
