@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 16:17:08 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/15 18:24:31 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/16 11:49:12 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-#define PRINTNAME(name) printf("=== %s ===\n", name);
+#define NAME(name) printf("=== %s ===\n", name);
 #define SUCCESSMSG "\e[32m[Success]\e[39m\n"
 #define PRINTFSUCCESS printf("%s", SUCCESSMSG)
 #define FAILUREMSG "\e[31m[Failure]\e[39m\n"

@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:03:48 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/15 20:18:56 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/16 12:15:25 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,22 @@ static int	generic_tester(char *expected, int fd)
 
 void	basic_test(void)
 {
-	PRINTNAME("basic_test");
+	NAME("basic_test");
 	int fd = open("./tests/test1", O_RDONLY);
 	generic_tester("teeeeest", fd);
 	ft_memdel((void**)&line);
+	close(fd);
 
 ///////////////=================================================
 
 	fd = open("./tests/test2", O_RDONLY);
-	GNLRETURN(get_next_line(fd, &line));
 	generic_tester("1234fjdskfjdskfjdskjfhds1", fd);
+	GNLRETURN(get_next_line(fd, &line));
+	GNLRETURN(get_next_line(fd, &line));
+	GNLRETURN(get_next_line(fd, &line));
+	GNLRETURN(get_next_line(fd, &line));
+	GNLRETURN(get_next_line(fd, &line));
+	GNLRETURN(get_next_line(fd, &line));
 	ft_memdel((void**)&line);
 	close(fd);
 
@@ -53,12 +59,13 @@ void	basic_test(void)
 	generic_tester("4567890", fd);
 	generic_tester("defghijk", fd);
 	ft_memdel((void**)&line);
+	close(fd);
 
 ///////////////=================================================
 
 	fd = open("./tests/gnl7_2.txt", O_RDONLY);
-	GNLRETURN(get_next_line(fd, &line));
 	generic_tester("1234567", fd);
+	GNLRETURN(get_next_line(fd, &line));
 	ft_memdel((void**)&line);
 	close(fd);
 
