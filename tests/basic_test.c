@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:03:48 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/16 12:15:25 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/17 15:25:51 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,12 +42,18 @@ void	basic_test(void)
 
 	fd = open("./tests/test2", O_RDONLY);
 	generic_tester("1234fjdskfjdskfjdskjfhds1", fd);
-	GNLRETURN(get_next_line(fd, &line));
-	GNLRETURN(get_next_line(fd, &line));
-	GNLRETURN(get_next_line(fd, &line));
-	GNLRETURN(get_next_line(fd, &line));
-	GNLRETURN(get_next_line(fd, &line));
-	GNLRETURN(get_next_line(fd, &line));
+	generic_tester("fdsfjhdskfjhdskfjh dskfjhds2", fd);
+	generic_tester("kfjhdskfjhdskjfhdskjfh3", fd);
+	generic_tester("dskjfhdskfjhsdk fjhsdkjfhsdkf4", fd);
+	generic_tester("jhsdkfjhdskfjhdskfjhdskfjhdskfjhdskfjhds fsdf 5", fd);
+	generic_tester(" fjdslfkjdslkfjdslk fjdslfj dslkfjdslfkjsdlfkjsdlkfjdslkfjsdlkjfldskfjoidjfgodigjfodgjfd lgjfdkl gjfdlgj dfigjfdoi jgodfjg ofdijgofdijg6", fd);
+	generic_tester(" fsdjflisdjfsdjfidsjfidsjfoisdjfodsijfodsijgidfjgoifdjgopdfkgdf7", fd);
+	
+	if (!get_next_line(fd, &line))
+		PRINTFSUCCESS;
+	else
+		PRINTFFAILURE;
+
 	ft_memdel((void**)&line);
 	close(fd);
 

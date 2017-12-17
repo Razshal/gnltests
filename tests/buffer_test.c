@@ -12,7 +12,7 @@ void buffer_test(void)
 	int		count = 0;
 	int		res = 0;
 	int fd = open("/dev/random", O_RDONLY);
-	while ((res = get_next_line(fd, &str)) == 1 && count < 500)
+	while ((res = get_next_line(fd, &str)) == 1 && count < 10000)
 		count++;
 	if (res)
 		PRINTFSUCCESS;
