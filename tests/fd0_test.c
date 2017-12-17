@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/17 19:13:35 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/17 19:23:21 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/17 19:56:27 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ void	fd0_test(void)
 	while ((res = get_next_line(0, &str)))
 	{
 		printf("Return : %d\n", res);
-		printf("%s\n", str);
+		printf("Line:\n%s\n", str);
 	}
 }
