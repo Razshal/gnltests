@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/06 16:17:08 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/16 16:50:17 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/17 19:18:13 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@
 
 void	basic_test(void);
 void	buffer_test(void);
+void	fd0_test(void);
 
 #endif

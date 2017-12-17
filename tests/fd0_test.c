@@ -1,22 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   gnltests.c                                         :+:      :+:    :+:   */
+/*   fd0_test.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/06 16:46:10 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/17 19:20:28 by mfonteni         ###   ########.fr       */
+/*   Created: 2017/12/17 19:13:35 by mfonteni          #+#    #+#             */
+/*   Updated: 2017/12/17 19:23:21 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "gnltests.h"
+#include "../gnltests.h"
 
-int main(void)
+void	fd0_test(void)
 {
-	NAME("GNLTESTS");
-	basic_test();
-	buffer_test();
-	printf("Now you can type your tests trough the stardard input\n");
-	fd0_test();
+	char	*str;
+	int		res = 0;
+
+	while ((res = get_next_line(0, &str)))
+	{
+		printf("Return : %d\n", res);
+		printf("%s\n", str);
+	}
 }
