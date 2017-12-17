@@ -6,7 +6,7 @@
 #    By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/08 16:12:13 by mfonteni          #+#    #+#              #
-#    Updated: 2017/12/16 16:22:17 by mfonteni         ###   ########.fr        #
+#    Updated: 2017/12/17 17:14:22 by mfonteni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,8 @@ f: re
 	@./$(NAME)
 
 $(NAME): $(OBJ)
+	@make -C ../libft/
+	@cp ../libft/libft.a .
 	@gcc -o $(NAME) $(FLAGS) $(SRC) libft.a
 	@echo "done"
 
