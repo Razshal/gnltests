@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:03:48 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/17 15:25:51 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/18 13:43:48 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,14 @@ void	basic_test(void)
 	close(fd);
 
 ///////////////=================================================
+
+	NAME("Wrong fd test");
+	fd = 42;
+	if (get_next_line(fd, &line) == -1)
+		PRINTFSUCCESS;
+	else
+	{
+		PRINTFFAILURE;
+		printf("Your gnl doesn't handle wrong fd errors\n");
+	}
 }
