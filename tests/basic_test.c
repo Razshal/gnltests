@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:03:48 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/18 13:43:48 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/18 13:55:24 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static int	generic_tester(char *expected, int fd)
 
 void	basic_test(void)
 {
-	NAME("basic_test");
+	NAME("One line, 8 chars no \\n");
 	int fd = open("./tests/test1", O_RDONLY);
 	generic_tester("teeeeest", fd);
 	ft_memdel((void**)&line);
@@ -40,6 +40,7 @@ void	basic_test(void)
 
 ///////////////=================================================
 
+	NAME("7 lines, differents line sizes");
 	fd = open("./tests/test2", O_RDONLY);
 	generic_tester("1234fjdskfjdskfjdskjfhds1", fd);
 	generic_tester("fdsfjhdskfjhdskfjh dskfjhds2", fd);
@@ -59,6 +60,7 @@ void	basic_test(void)
 
 ///////////////================================================
 
+	NAME("4 lines, no final \\n");
 	fd = open("./tests/gnl7_3.txt", O_RDONLY);
 	generic_tester("1234567", fd);
 	generic_tester("abcdefg", fd);
@@ -69,11 +71,24 @@ void	basic_test(void)
 
 ///////////////=================================================
 
+	NAME("2 lines, 7 and 8 chars, no final \\n");
 	fd = open("./tests/gnl7_2.txt", O_RDONLY);
 	generic_tester("1234567", fd);
-	GNLRETURN(get_next_line(fd, &line));
+	generic_tester("abcdefgh", fd);
 	ft_memdel((void**)&line);
 	close(fd);
+
+///////////////=================================================
+
+	NAME("One line, 100k chars, final \\n");
+	char *bigstr = (char*)malloc(sizeof(char) * 150000);
+	fd = open("./tests/test5", O_RDONLY);
+	read(fd, bigstr, 150000);
+	get_next_line(fd, &line);
+	if (!strcmp(line, bigstr))
+		PRINTFSUCCESS;
+	else
+		PRINTFFAILURE;
 
 ///////////////=================================================
 
