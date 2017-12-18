@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/17 19:13:35 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/18 12:09:02 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/18 14:58:03 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	fd0_test(void)
 {
+	NAME("Standard input tests");
+	printf("Now you can type your one line tests trough the stardard input\nCTRL + C to exit anytime, there is no more tests after this one\nUsage example for a multi line test : echo \"fdsfdsfdsfdsfd\\n\" | ./gnltests\n");
 	char	*str;
 	int		res = 5;
 

@@ -8,6 +8,7 @@
 void buffer_test(void)
 {
 	NAME("Buffer test");
+	printf ("This test cannot be completed if you store the whole file at the first gnl call\nIt doesn't mean you're wrong !\n");
 	char	*str;
 	int		count = 0;
 	int		res = 0;

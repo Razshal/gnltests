@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:03:48 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/18 14:09:30 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/18 14:53:14 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	basic_test(void)
 
 ///////////////=================================================
 
-	NAME("7 lines, differents line sizes");
+	NAME("7 lines, different line sizes");
 	fd = open("./tests/test2", O_RDONLY);
 	generic_tester("1234fjdskfjdskfjdskjfhds1", fd);
 	generic_tester("fdsfjhdskfjhdskfjh dskfjhds2", fd);
