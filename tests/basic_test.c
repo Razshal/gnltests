@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:03:48 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/18 13:55:24 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/18 13:58:28 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ void	basic_test(void)
 	close(fd);
 
 ///////////////=================================================
-
+/*
 	NAME("One line, 100k chars, final \\n");
 	char *bigstr = (char*)malloc(sizeof(char) * 150000);
 	fd = open("./tests/test5", O_RDONLY);
@@ -89,7 +89,7 @@ void	basic_test(void)
 		PRINTFSUCCESS;
 	else
 		PRINTFFAILURE;
-
+*/
 ///////////////=================================================
 
 	NAME("Wrong fd test");
