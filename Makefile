@@ -6,7 +6,7 @@
 #    By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/08 16:12:13 by mfonteni          #+#    #+#              #
-#    Updated: 2017/12/17 19:19:28 by mfonteni         ###   ########.fr        #
+#    Updated: 2017/12/18 14:10:31 by mfonteni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ $(NAME): $(OBJ)
 	@echo "done"
 
 clean:
-	@rm -f $(OBJ)
+	@rm -f $(OBJ) libft.a
 
 fclean: clean
 	@rm -f $(NAME)

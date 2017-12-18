@@ -6,7 +6,7 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:03:48 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/18 13:58:28 by mfonteni         ###   ########.fr       */
+/*   Updated: 2017/12/18 14:09:30 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,17 +79,30 @@ void	basic_test(void)
 	close(fd);
 
 ///////////////=================================================
-/*
-	NAME("One line, 100k chars, final \\n");
-	char *bigstr = (char*)malloc(sizeof(char) * 150000);
+
+	NAME("One line, 100k chars, no final \\n");
+	char	*bigstr;
+	int		testfd;
+	int		cursor;
+
+	if (!(bigstr = (char*)malloc(sizeof(char) * 150001)))
+		printf("test error, not your program fault\n");
+	testfd = open("./tests/test5", O_RDONLY);
+	cursor = read(fd, bigstr, 150000);
+	close(testfd);
+	if (cursor >= 0)
+		bigstr[cursor] = '\0';
+	else
+		printf("Test error, not your gnl fault\n");
 	fd = open("./tests/test5", O_RDONLY);
-	read(fd, bigstr, 150000);
 	get_next_line(fd, &line);
-	if (!strcmp(line, bigstr))
+	if (line && bigstr && !strcmp(line, bigstr))
 		PRINTFSUCCESS;
 	else
 		PRINTFFAILURE;
-*/
+	close(fd);
+	free(bigstr);
+
 ///////////////=================================================
 
 	NAME("Wrong fd test");
