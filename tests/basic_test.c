@@ -6,13 +6,22 @@
 /*   By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/08 13:03:48 by mfonteni          #+#    #+#             */
-/*   Updated: 2017/12/18 14:53:14 by mfonteni         ###   ########.fr       */
+/*   Updated: 2018/01/03 13:46:58 by mfonteni         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../gnltests.h"
 
 char	*line = NULL;
+
+void	my_memdel(void **ap)
+{
+	if (ap)
+	{
+		free(*ap);
+		*ap = NULL;
+	}
+}
 
 static int	generic_tester(char *expected, int fd)
 {
@@ -35,7 +44,7 @@ void	basic_test(void)
 	NAME("One line, 8 chars no \\n");
 	int fd = open("./tests/test1", O_RDONLY);
 	generic_tester("teeeeest", fd);
-	ft_memdel((void**)&line);
+	my_memdel((void**)&line);
 	close(fd);
 
 ///////////////=================================================
@@ -55,7 +64,7 @@ void	basic_test(void)
 	else
 		PRINTFFAILURE;
 
-	ft_memdel((void**)&line);
+	my_memdel((void**)&line);
 	close(fd);
 
 ///////////////================================================
@@ -66,7 +75,7 @@ void	basic_test(void)
 	generic_tester("abcdefg", fd);
 	generic_tester("4567890", fd);
 	generic_tester("defghijk", fd);
-	ft_memdel((void**)&line);
+	my_memdel((void**)&line);
 	close(fd);
 
 ///////////////=================================================
@@ -75,7 +84,7 @@ void	basic_test(void)
 	fd = open("./tests/gnl7_2.txt", O_RDONLY);
 	generic_tester("1234567", fd);
 	generic_tester("abcdefgh", fd);
-	ft_memdel((void**)&line);
+	my_memdel((void**)&line);
 	close(fd);
 
 ///////////////=================================================
