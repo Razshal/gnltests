@@ -10,3 +10,5 @@ gnltest/
 ```
 
 gnl7_2.txt & gnl7_3.txt are from juthomas's [file checker](https://github.com/juthomas/filechecker)
+
+Make f to make re and launch the tests

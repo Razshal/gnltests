@@ -6,7 +6,7 @@
 #    By: mfonteni <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/08 16:12:13 by mfonteni          #+#    #+#              #
-#    Updated: 2017/12/18 14:10:31 by mfonteni         ###   ########.fr        #
+#    Updated: 2018/01/03 13:42:07 by mfonteni         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,8 +27,10 @@ f: re
 	@./$(NAME)
 
 $(NAME): $(OBJ)
+	@echo "Making your libft"
 	@make -C ../gnl/libft/
 	@cp ../gnl/libft/libft.a .
+	@echo "gcc your libft with the tests"
 	@gcc -o $(NAME) $(FLAGS) $(SRC) libft.a
 	@echo "done"
 
